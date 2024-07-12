@@ -7,7 +7,7 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 @app.route(route="http_trigger_poc")
 def http_trigger_poc(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-    url = "https://ingest.red.dodo.eyrie.cloud/api/ingest/hec/2b86090d018c4150afc3e14d630871ce/v1/services/collector"
+    url = "https://ingest.us-1.crowdstrike.com/api/ingest/hec/441bb01f07f44686a9894db6ad13d3c4/v1/services/collector"
 
     payload = {"event": {
             "time": "1720794300",
@@ -50,7 +50,7 @@ def http_trigger_poc(req: func.HttpRequest) -> func.HttpResponse:
             }
         }}
     headers = {
-        "Authorization": "Bearer ecfb0cd70428451db5dd3b56575894f9",
+        "Authorization": "Bearer 561be9fd399243a5bf5bc3e8e0eb2407",
         "Content-Type": "application/json"
     }
 
