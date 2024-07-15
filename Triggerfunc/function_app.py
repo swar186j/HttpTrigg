@@ -7,10 +7,10 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 @app.route(route="http_trigger_poc")
 def http_trigger_poc(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-    url = "https://ingest.us-1.crowdstrike.com/api/ingest/hec/441bb01f07f44686a9894db6ad13d3c4/v1/services/collector"
+    url = "https://ingest.us-1.crowdstrike.com/api/ingest/hec/be05febd4f9f49809f094cec369f92c7/v1/services/collector"
 
     payload = {"event": {
-            "time": "1720794300",
+            "time": "2024-07-15T05:08:09Z",
             "systemId": "2ed3d102-f60d-49cb-91f1-3e26d8e13d1f",
             "macAddress": "6045BD72AEC4",
             "category": "NetworkSecurityGroupFlowEvent",
@@ -50,7 +50,7 @@ def http_trigger_poc(req: func.HttpRequest) -> func.HttpResponse:
             }
         }}
     headers = {
-        "Authorization": "Bearer 561be9fd399243a5bf5bc3e8e0eb2407",
+        "Authorization": "Bearer 2f88e67c4a89429284d259fe97ff9a1a",
         "Content-Type": "application/json"
     }
 
